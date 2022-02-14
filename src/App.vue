@@ -10,6 +10,7 @@
   <Lista :dados="dadosLista" @mudancaEmitida="mudancaLista" />
   <br />
   <div class="info msg">
+    <a href="https://stackoverflow.com/questions/41520239/content-alignment-in-dropdown-selector"> sobre o dropdown</a>
     Em caso de dúvida entre em contato pelo email <a href="mailto:mardt@usp.br">mardt@usp.br</a>.
     <br />
     Boa sorte e bom trabalho!

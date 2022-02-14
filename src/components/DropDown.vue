@@ -12,7 +12,8 @@
 
     <div class="dropdown" :class="{'down': estado}"> {{ opcaoSelecionada }} ⬇ </div>
     <ul :class="{'opcoes': estado}">
-        <!-- OPÇÕES PASSADAS (INDICANDO A ATUAL SELECIONADA) -->
+        
+        
     </ul>
 </template>
 
@@ -46,7 +47,12 @@
      padding: 5px;
  }
 
- .down {  }
+ .down {  
 
- .opcoes {  }
+
+ }
+
+ .opcoes {  
+ 
+ }
 </style>
