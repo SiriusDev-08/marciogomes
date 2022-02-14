@@ -15,22 +15,31 @@
         <label for="senha"> <span> Repita a senha: </span> </label>
         <input v-model="senhaConf" type="password" id="senhaConf" placeholder="Repita a senha..." required/>
     </div>
+    <p> A senha é {{senha}} </p>
 
-    <span v-if="placeholder" class="senha-err">As duas senhas devem ser iguais!</span>
+    <span v-if="placeholder" class="senhas-diferentes">As duas senhas devem ser iguais!</span>
+    <span v-if="placeholder" class="senhas-iguais">As duas senhas são iguais!</span>
 
-    <span v-if="placeholder" class="senha-err">
+
+
+    <span v-if="placeholder" class="senhas-diferentes">
         <ul>
-            <li :class="{'conferido': placeholder}">Pelo menos um caractere minúsculo</li>
-            <li :class="{'conferido': placeholder}">Pelo menos um caractere maiúsculo</li>
-            <li :class="{'conferido': placeholder}">Pelo menos um caractere especial</li>
-            <li :class="{'conferido': placeholder}">Pelo menos um caractere numérico</li>
-            <li :class="{'conferido': placeholder}">Pelo menos oito caracteres</li>
+            <li :class="{'conferido1': placeholder}">Pelo menos um caractere minúsculo</li>
+            <li :class="{'conferido2': placeholder}">Pelo menos um caractere maiúsculo</li>
+            <li :class="{'conferido3': placeholder}">Pelo menos um caractere especial</li>
+            <li :class="{'conferido4': placeholder}">Pelo menos um caractere numérico</li>
+            <li :class="{'conferido5': placeholder}">Pelo menos oito caracteres</li>
         </ul>
     </span>
 </template>
 
 <script>
     export default {
+        model: {
+            prop: 'password', 
+            event:'update'
+        }, 
+
         name: "Senha",
         data() {
             return {
@@ -43,7 +52,13 @@
                 return true;
             }
         },
-        methods: {}
+        methods: {
+           senha(event){
+               senha = 0; 
+           }
+        
+
+        }
     }
 </script>
 
